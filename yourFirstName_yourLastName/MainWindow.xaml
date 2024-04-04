@@ -1,0 +1,36 @@
+﻿<Window x:Class="yourFirstName_yourLastName.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:yourFirstName_yourLastName"
+        mc:Ignorable="d"
+        Title="Contole continu 1" Height="400" Width="500" Background="#FFB9B9B9">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Label Content="3ISI" Grid.ColumnSpan="2"  VerticalAlignment="top" HorizontalAlignment="Center"  />
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0"  >
+            <Label Content="Name"/>
+            <TextBox  Text="" Width="180" TextChanged="numberTextBox_TextChanged" PreviewTextInput="numberTextBox_PreviewTextInput"/>
+            <Label Content="Age"/>
+            <TextBox  Text="" Width="180" TextChanged="numberTextBox_TextChanged" PreviewTextInput="numberTextBox_PreviewTextInput"/>
+            <Label Content="Email"/>
+            <TextBox x:Name="text_box"  Text="" Width="180" TextChanged="numberTextBox_TextChanged" PreviewTextInput="numberTextBox_PreviewTextInput"/>
+            <Label Content="Height"/>
+            <Slider x:Name="slider1" MinHeight="100" MaxHeight="250" MinWidth="30" MaxWidth="150" ValueChanged="Slider_ValueChanged" />
+            <Label Content="Weight"/>
+            <Slider x:Name="slider2"  MinHeight="100" MaxHeight="250" MinWidth="30" MaxWidth="150" ValueChanged="slider2_ValueChanged" />
+            <Button Content="Submit" Click="Button_Click"/>
+        </StackPanel>
+        <ListBox x:Name="myListBox" d:ItemsSource="{d:SampleData ItemCount=5}" Grid.Column="1" Margin="20,10,10,20" SelectionChanged="ListBox_SelectionChanged"/>
+
+
+    </Grid>
+</Window>
